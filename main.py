@@ -62,6 +62,7 @@ for i in range(5):
     enemies.add(enemy)
 asteroid1 = Asteroid(randint(0, W - 70), randint(-35,10), 70 ,35, randint(1,3),'images/asteroid.png')
 
+
 life = 3
 killed = 0
 skipped = 0    
