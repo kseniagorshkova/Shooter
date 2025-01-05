@@ -56,8 +56,15 @@ class Asteroid(GameSprite):
             self.rect.y = 0
                       
 player = Player(W / 2, H - 100, 50, 100, 5, "images/rocket.png")
-    
+enemies = sprite.Group()
+for i in range(5):
+    enemy = Enemy(randint(0, W - 70), randint(-35,10), 70 ,35, randint(1,3),'images/ufo.png')
+    enemies.add(enemy)
+asteroid1 = Asteroid(randint(0, W - 70), randint(-35,10), 70 ,35, randint(1,3),'images/asteroid.png')
 
+life = 3
+killed = 0
+skipped = 0    
 game = True
 while game:
     for e in event.get():
